@@ -1,0 +1,94 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	// .header__container
+	&__container {
+	}
+	// .header__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(50);
+		padding: rem(60) 0px;
+	}
+	// .header__logo
+	&__logo {
+		flex: 0 0 rem(303);
+		display: flex;
+		align-items: center;
+	}
+	// .header__content
+	&__content {
+		display: flex;
+		gap: rem(60);
+		align-items: center;
+	}
+	// .header__menu
+	&__menu {
+	}
+	// .header__actions
+	&__actions {
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+	}
+	// .header__phone
+	&__phone {
+		white-space: nowrap;
+		text-decoration: underline;
+		color: #fff;
+		font-size: rem(20);
+	}
+	// .header__socials
+	&__socials {
+		display: flex;
+		gap: rem(15);
+		align-items: center;
+	}
+	// .header__wu
+	&__wu {
+		color: #fff;
+	}
+	// .header__tg
+	&__tg {
+		color: #fff;
+	}
+	// .header__btn
+	&__btn {
+		white-space: nowrap;
+		height: rem(45);
+		font-size: rem(20);
+	}
+}
+
+//===============================================================
+.menu {
+	// .menu__body
+	&__body {
+	}
+	// .menu__close
+	&__close {
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: rem(10) rem(30);
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		white-space: nowrap;
+		color: #fff;
+		font-family: "Circe";
+		font-size: rem(21);
+	}
+}
