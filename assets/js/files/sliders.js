@@ -53,6 +53,18 @@ const mainSlider = new Swiper(".main-slider", {
 	},
 });
 
+//===============================================================
+const test = new Swiper(".details-slider_1", {
+	speed: 1000,
+	slidesPerView: 1,
+	spaceBetween: 30,
+	navigation: {
+		prevEl: ".details-slider__arrow_prev_1",
+		nextEl: ".details-slider__arrow_next_1",
+		disabledClass: "_disabled",
+	},
+});
+
 // /**
 //  * Пример инициализации слайдера
 //  */
