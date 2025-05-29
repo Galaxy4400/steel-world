@@ -70,13 +70,11 @@
  */
 .menu-icon {
 	display: none;
-	@media (max-width: em($md3)) {
+	@media (max-width: em(1300)) {
 		display: block;
-		position: absolute;
-		top: rem(10);
-		right: rem(140);
+		position: relative;
 		width: rem(30);
-		height: rem(18);
+		height: rem(22);
 		cursor: pointer;
 		z-index: 5;
 		span {
@@ -86,7 +84,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: #fff;
 			&:first-child {
 				top: 0px;
 			}

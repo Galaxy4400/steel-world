@@ -86,6 +86,12 @@ body {
 		font-size: rem(58);
 		font-weight: 700;
 		line-height: normal;
+		@media (max-width: em($md2)) {
+			font-size: rem(32);
+		}
+		@media (max-width: em($md3)) {
+			font-size: rem(26);
+		}
 	}
 	.h3,
 	h3 a,

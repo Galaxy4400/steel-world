@@ -1,6 +1,5 @@
 .slider-section {
 	position: relative;
-	height: 100vh;
 	// .slider-section__slider
 	&__slider {
 		height: 100%;
@@ -13,11 +12,16 @@
 //===============================================================
 .main-slider {
 	position: relative;
+	height: 100vh;
+	min-height: rem(600);
 	// .main-slider__slides
 	&__slides {
 	}
 	// .main-slider__slide
 	&__slide {
+		@media (max-width: em($md3)) {
+			padding: rem(150) 0px rem(300) 0px;
+		}
 	}
 	// .main-slider__arrows
 	&__arrows {
@@ -29,6 +33,9 @@
 		display: flex;
 		justify-content: space-between;
 		z-index: 10;
+		@media (max-width: em($md3)) {
+			display: none;
+		}
 	}
 	// .main-slider__arrow
 	&__arrow {
@@ -124,13 +131,15 @@
 	}
 	// .slider-contacts__body
 	&__body {
-		display: flex;
-		justify-content: space-between;
-		gap: rem(30);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: rem(10) rem(30);
+		@media (max-width: em($md3)) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 	// .slider-contacts__item
 	&__item {
-		flex: 0 1 33.333%;
 		display: grid;
 		justify-items: center;
 		align-content: start;
@@ -143,6 +152,12 @@
 		font-size: rem(23);
 		font-weight: 700;
 		margin: 0px 0px rem(10) 0px;
+		@media (max-width: em($md2)) {
+			font-size: rem(18);
+		}
+		@media (max-width: em($md3)) {
+			font-size: rem(16);
+		}
 	}
 	// .slider-contacts__value
 	&__value {
@@ -154,6 +169,13 @@
 		max-width: rem(300);
 		a {
 			color: #737a7d;
+		}
+		@media (max-width: em($md2)) {
+			font-size: rem(16);
+		}
+		@media (max-width: em($md3)) {
+			font-size: rem(14);
+			max-width: unset;
 		}
 	}
 }

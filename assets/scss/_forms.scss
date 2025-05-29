@@ -9,7 +9,7 @@
 	text-align: center;
 	font-size: rem(21);
 	line-height: 1;
-	padding: rem(10) rem(25);
+	padding: rem(15) rem(25);
 	height: rem(56);
 	background: var(--color-main);
 	color: #ffffff !important;
@@ -22,6 +22,10 @@
 		&:hover {
 			background: var(--color-main-dark);
 		}
+	}
+	@media (max-width: em($md2)) {
+		height: rem(32);
+		font-size: rem(18);
 	}
 	// .btn_fw
 	&_fw {
