@@ -6223,12 +6223,20 @@ body ._special-styles .table-wrapper {
 .btn_big {
   height: 3.125rem;
 }
+.btn_small {
+  height: 2.1875rem;
+  font-size: 1.25rem;
+  padding: 0.3125rem 1.25rem;
+}
 .btn_long {
   min-width: 12.5rem;
 }
 .btn_trans {
   background: transparent;
   border: 0.125rem solid rgba(255, 255, 255, 0.2);
+}
+.btn_black {
+  background: #000;
 }
 .btn:focus {
   -webkit-box-shadow: 0 0 0 1px var(--color-focus);
@@ -7358,5 +7366,190 @@ textarea.input {
   .slider-contacts__value {
     font-size: 0.875rem;
     max-width: unset;
+  }
+}
+
+.catalog {
+  padding: 9.375rem 0rem;
+}
+@media (max-width: 61.9375em) {
+  .catalog {
+    padding: 6.25rem 0rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .catalog {
+    padding: 3.125rem 0rem;
+  }
+}
+.catalog__body {
+  display: grid;
+  gap: 1.875rem;
+  grid-template-columns: 46% 1fr 1fr;
+}
+@media (max-width: 81.25em) {
+  .catalog__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 47.9375em) {
+  .catalog__body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.catalog-item {
+  position: relative;
+  border-radius: 1.875rem;
+  background: #fff;
+  overflow: hidden;
+}
+.catalog-item__main {
+  position: relative;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 0.625rem;
+  padding: 1.25rem;
+}
+.catalog-item__img {
+  width: 12.5rem;
+  height: 12.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.catalog-item__title {
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+@media (max-width: 61.9375em) {
+  .catalog-item__title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .catalog-item__title {
+    font-size: 1.375rem;
+  }
+}
+.catalog-item__arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  translate: 0 -50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: var(--color-main);
+  border-radius: 1.875rem 0px 0px 1.875rem;
+  width: 2.1875rem;
+  height: 2.1875rem;
+}
+.catalog-item__content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1.875rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.25rem;
+}
+@media (any-hover: hover) {
+  .catalog-item:hover .catalog-item__content {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.catalog-item__sub-title {
+  color: #fff;
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+@media (max-width: 61.9375em) {
+  .catalog-item__sub-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .catalog-item__sub-title {
+    font-size: 1.375rem;
+  }
+}
+.catalog-item__desc {
+  color: #fff;
+  font-size: 1.1875rem;
+}
+.catalog-item__actions {
+  display: grid;
+  justify-items: center;
+  gap: 0.625rem;
+}
+.catalog-item__btn {
+  width: 14.375rem;
+}
+@media (min-width: 81.25em) {
+  .catalog-item_big .catalog-item__title {
+    font-size: 1.875rem;
+  }
+  .catalog-item_tall {
+    grid-row: span 2;
+  }
+  .catalog-item_tall .catalog-item__main {
+    gap: 1.875rem;
+  }
+  .catalog-item_tall .catalog-item__img {
+    height: 28.125rem;
+    width: 28.125rem;
+  }
+  .catalog-item_long {
+    grid-column: span 2;
+  }
+  .catalog-item_horizontal .catalog-item__main {
+    grid-template-columns: auto 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+    gap: 1.875rem;
+  }
+  .catalog-item_horizontal .catalog-item__img {
+    height: 15rem;
+    width: 15rem;
+  }
+  .catalog-item_horizontal .catalog-item__title {
+    padding: 0px 3.125rem 0px 0px;
   }
 }
