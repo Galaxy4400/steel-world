@@ -7,7 +7,6 @@
  * Определение стилей модальных окон
  */
 
-
 // Стили элемента, открывающего модальное окно
 a[data-modal-opener] {
 	cursor: pointer;
@@ -21,16 +20,19 @@ a[data-modal-opener] {
 	right: 0;
 	bottom: 0;
 	z-index: 1000;
-	background-color: rgba(0,0,0, 0.5);
+	// background-color: rgba(0, 0, 0, 0.5);
+	background-color: #fff;
 	cursor: pointer;
 	overflow-y: auto;
 	overflow-x: hidden;
 	text-align: center;
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity var(--transition-time), visibility var(--transition-time);
+	transition:
+		opacity var(--transition-time),
+		visibility var(--transition-time);
 	&::before {
-		content: '';
+		content: "";
 		display: inline-block;
 		vertical-align: middle;
 		height: 100%;
@@ -43,21 +45,18 @@ a[data-modal-opener] {
 	// Общие стили модальных окон
 	[data-modal] {
 		position: relative;
-		width: rem(900);
-		margin: rem(50) auto;
-		padding: rem(30) rem(50);
+		width: 99.6%;
+		min-height: 100vh;
 		display: none;
 		vertical-align: middle;
 		background-color: #fff;
-		border-radius: rem(5);
 		cursor: default;
 		text-align: left;
-		@media (max-width: ($md2+'px')) {
-			width: 90%;
+		@media (max-width: em($md1)) {
+			width: 99%;
 		}
-		@media (max-width: ($md4+'px')) {
+		@media (max-width: em($md4)) {
 			width: 98%;
-			padding: rem(20);
 		}
 		&._active {
 			display: inline-block;
@@ -79,7 +78,7 @@ a[data-modal-opener] {
 			transition: all 0.3s ease 0s;
 			&:before,
 			&:after {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -101,9 +100,8 @@ a[data-modal-opener] {
 			}
 		}
 
-
 		// Анимации сворачивания/разворачивания модального окна
-		
+
 		&.fade {
 			opacity: 0;
 			transition: opacity var(--transition-time);
@@ -118,12 +116,16 @@ a[data-modal-opener] {
 		&.fadeIn {
 			opacity: 0;
 			transform: scale(0.8);
-			transition: opacity var(--transition-time), transform var(--transition-time);
+			transition:
+				opacity var(--transition-time),
+				transform var(--transition-time);
 		}
 		&.fadeIn._animate {
 			opacity: 1;
 			transform: scale(1);
-			transition: opacity var(--transition-time), transform var(--transition-time);
+			transition:
+				opacity var(--transition-time),
+				transform var(--transition-time);
 		}
 
 		//---------------------------------------------------------------
@@ -131,12 +133,16 @@ a[data-modal-opener] {
 		&.fadeInUp {
 			opacity: 0;
 			transform: translateY(-100px) scale(0.95);
-			transition: opacity var(--transition-time), transform var(--transition-time);
+			transition:
+				opacity var(--transition-time),
+				transform var(--transition-time);
 		}
 		&.fadeInUp._animate {
 			opacity: 1;
 			transform: translateY(0) scale(1);
-			transition: opacity var(--transition-time), transform var(--transition-time);
+			transition:
+				opacity var(--transition-time),
+				transform var(--transition-time);
 		}
 
 		//---------------------------------------------------------------
@@ -144,12 +150,16 @@ a[data-modal-opener] {
 		&.fadeInDown {
 			opacity: 0;
 			transform: translateY(100px) scale(0.95);
-			transition: opacity var(--transition-time), transform var(--transition-time);
+			transition:
+				opacity var(--transition-time),
+				transform var(--transition-time);
 		}
 		&.fadeInDown._animate {
 			opacity: 1;
 			transform: translateY(0) scale(1);
-			transition: opacity var(--transition-time), transform var(--transition-time);
+			transition:
+				opacity var(--transition-time),
+				transform var(--transition-time);
 		}
 
 		//---------------------------------------------------------------
@@ -157,14 +167,12 @@ a[data-modal-opener] {
 		// При необходимости определить желаемый стиль анимации по аналогии с существующими
 	}
 
-
 	// Собственные стили модальных окон
 
 	.modal-info {
 		width: rem(1200);
-		@media (max-width: em(1300)) {
+		@media (max-width: em($md0)) {
 			width: 98%;
 		}
 	}
-
 }

@@ -3,24 +3,51 @@
  */
 ._container {
 	max-width: rem($maxWidthContainer);
-	padding: 0px px($containerPadding);
 	margin: 0 auto;
+	padding: 0px px($containerPadding);
+	@media (max-width: em($md2)) {
+		padding: 0px px(40);
+	}
+	@media (max-width: em($md3)) {
+		padding: 0px px(25);
+	}
+	@media (max-width: em($md3)) {
+		padding: 0px px(15);
+	}
 }
 /**
  * Устанавливает ограничение блоку по ширине
  */
 ._container-long {
 	max-width: rem(1606);
-	padding: 0px px($containerPadding);
 	margin: 0 auto;
+	padding: 0px px($containerPadding);
+	@media (max-width: em($md2)) {
+		padding: 0px px(40);
+	}
+	@media (max-width: em($md3)) {
+		padding: 0px px(25);
+	}
+	@media (max-width: em($md3)) {
+		padding: 0px px(15);
+	}
 }
 /**
  * Устанавливает ограничение блоку по ширине
  */
 ._container-longer {
 	max-width: rem(1803);
-	padding: 0px px($containerPadding);
 	margin: 0 auto;
+	padding: 0px px($containerPadding);
+	@media (max-width: em($md2)) {
+		padding: 0px px(40);
+	}
+	@media (max-width: em($md3)) {
+		padding: 0px px(25);
+	}
+	@media (max-width: em($md3)) {
+		padding: 0px px(15);
+	}
 }
 
 /**

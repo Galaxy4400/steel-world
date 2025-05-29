@@ -70,7 +70,7 @@
  */
 .menu-icon {
 	display: none;
-	@media (max-width: em(1300)) {
+	@media (max-width: em($md0)) {
 		display: block;
 		position: relative;
 		width: rem(30);

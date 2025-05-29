@@ -14,7 +14,7 @@
 		align-items: center;
 		gap: rem(50);
 		padding: rem(60) 0px;
-		@media (max-width: em(1300)) {
+		@media (max-width: em($md0)) {
 			gap: rem(30);
 		}
 		@media (max-width: em($md2)) {
@@ -38,7 +38,7 @@
 		display: flex;
 		gap: rem(60);
 		align-items: center;
-		@media (max-width: em(1300)) {
+		@media (max-width: em($md0)) {
 			gap: rem(0);
 		}
 	}
@@ -104,7 +104,7 @@
 .menu {
 	// .menu__body
 	&__body {
-		@media (max-width: em(1300)) {
+		@media (max-width: em($md0)) {
 			position: fixed;
 			top: -100%;
 			left: 0;
@@ -139,7 +139,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: rem(10) rem(30);
-		@media (max-width: em(1300)) {
+		@media (max-width: em($md0)) {
 			display: grid;
 			justify-items: center;
 			gap: rem(30);
@@ -154,7 +154,7 @@
 		color: #fff;
 		font-family: "Circe";
 		font-size: rem(21);
-		@media (max-width: em(1300)) {
+		@media (max-width: em($md0)) {
 			font-size: rem(26);
 		}
 	}

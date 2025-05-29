@@ -1,0 +1,48 @@
+.footer {
+	padding: rem(60) 0px;
+	background: #fff;
+	@media (max-width: em($md3)) {
+		padding: rem(40) 0px;
+	}
+	// .footer__container
+	&__container {
+	}
+	// .footer__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(30);
+		@media (max-width: em($md4)) {
+			flex-direction: column;
+		}
+	}
+	// .footer__copy
+	&__copy {
+		font-size: rem(21);
+		@media (max-width: em($md3)) {
+			font-size: rem(18);
+		}
+	}
+	// .footer__menu
+	&__menu {
+	}
+	// .footer__list
+	&__list {
+		display: flex;
+		gap: rem(10) rem(25);
+		@media (max-width: em($md1)) {
+			flex-direction: column;
+		}
+	}
+	// .footer__item
+	&__item {
+		color: #000;
+	}
+	// .footer__link
+	&__link {
+		font-size: rem(21);
+		@media (max-width: em($md3)) {
+			font-size: rem(18);
+		}
+	}
+}
