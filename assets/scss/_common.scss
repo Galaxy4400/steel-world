@@ -137,7 +137,16 @@ body {
 		}
 
 		p {
-			margin: 0px 0px rem(20) 0px;
+			font-size: rem(18);
+			line-height: 144.444%;
+		}
+
+		mark {
+			font-size: rem(18);
+			line-height: 144.444%;
+			display: inline-block;
+			background: unset;
+			color: var(--color-main);
 		}
 
 		figure {
@@ -149,12 +158,13 @@ body {
 		}
 
 		ul {
+			font-size: rem(18);
+			line-height: 144.444%;
 			padding: 0px 0px 0px rem(22);
-			margin: 0px 0px rem(10) 0px;
 			li {
 				position: relative;
 				line-height: 150%;
-				margin: 0px 0px rem(10) 0px;
+				// margin: 0px 0px rem(10) 0px;
 				& > ul,
 				& > ol {
 					padding-top: rem(10);
@@ -166,7 +176,8 @@ body {
 					left: em(-18);
 					width: em(6);
 					height: em(6);
-					background: var(--color-main-dark);
+					// background: var(--color-main-dark);
+					background: #000;
 					border-radius: 50%;
 				}
 			}

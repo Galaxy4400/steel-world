@@ -14,6 +14,7 @@ a[data-modal-opener] {
 
 // Стили основного контейнера модальных окон
 #modal {
+	min-width: 0px;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -44,6 +45,7 @@ a[data-modal-opener] {
 
 	// Общие стили модальных окон
 	[data-modal] {
+		min-width: 0px;
 		position: relative;
 		width: 99.6%;
 		// min-height: 100vh;
@@ -80,8 +82,8 @@ a[data-modal-opener] {
 		// Стили крестика закрывающего модальное окно
 		& > [data-close]:first-child {
 			position: absolute;
-			top: rem(0);
-			right: rem(0);
+			top: rem(10);
+			right: rem(10);
 			width: rem(15);
 			height: rem(15);
 			padding: rem(20);
@@ -93,8 +95,8 @@ a[data-modal-opener] {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				width: rem(15);
-				height: rem(2);
+				width: rem(30);
+				height: rem(3);
 				background: #000000;
 				border-radius: rem(2);
 			}
