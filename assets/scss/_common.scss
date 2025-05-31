@@ -96,9 +96,13 @@ body {
 	.h3,
 	h3 a,
 	h3 {
-		font-size: rem(28);
-		line-height: prc(33, 28);
-		color: var(--color-titles);
+		color: #000;
+		text-align: center;
+		font-family: "Cera Pro";
+		font-size: 58px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
 	}
 	.h4,
 	h4 a,
