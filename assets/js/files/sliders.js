@@ -53,8 +53,10 @@ const mainSlider = new Swiper(".main-slider", {
 	},
 });
 
-//===============================================================
-const test = new Swiper(".details-slider_1", {
+/**
+ * Инициализация слайдера
+ */
+const detailsSlider = new Swiper(".details-slider_1", {
 	speed: 1000,
 	slidesPerView: 1,
 	spaceBetween: 30,
@@ -64,6 +66,36 @@ const test = new Swiper(".details-slider_1", {
 		disabledClass: "_disabled",
 	},
 });
+
+/**
+ * Инициализация слайдера
+ */
+const projectsSlider = new Swiper(".projects-slider", {
+	speed: 1000,
+	slidesPerView: 1,
+	spaceBetween: 30,
+	autoHeight: true,
+	navigation: {
+		prevEl: ".projects-slider__arrow_prev",
+		nextEl: ".projects-slider__arrow_next",
+		disabledClass: "_disabled",
+	},
+	on: {
+		init: function () {
+			updateSlideTitle(this);
+		},
+		slideChange: function () {
+			updateSlideTitle(this);
+		},
+	},
+});
+
+function updateSlideTitle(swiper) {
+	const activeSlide = swiper.slides[swiper.activeIndex];
+	const titleContainer = document.querySelector("[data-slider-title]");
+	const title = activeSlide.getAttribute("data-title");
+	titleContainer.textContent = title;
+}
 
 // /**
 //  * Пример инициализации слайдера

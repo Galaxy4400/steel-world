@@ -797,7 +797,7 @@
 	background: #fff;
 	padding: rem(90) 0 rem(180);
 	@media (max-width: em($md2)) {
-		padding: rem(100) rem(0);
+		padding: rem(80) rem(0);
 	}
 	@media (max-width: em($md3)) {
 		padding: rem(50) rem(0);
@@ -938,6 +938,95 @@
 		@media (max-width: em($md3)) {
 			font-size: rem(16);
 		}
+	}
+}
+
+//===============================================================
+.projects {
+	padding: rem(90) 0;
+	@media (max-width: em($md2)) {
+		padding: rem(80) rem(0);
+	}
+	@media (max-width: em($md3)) {
+		padding: rem(50) rem(0);
+	}
+	// .projects__container
+	&__container {
+	}
+	// .projects__title
+	&__title {
+		text-align: center;
+		margin: 0px 0px rem(40) 0px;
+		@media (max-width: em($md2)) {
+			margin: 0px 0px rem(30) 0px;
+		}
+	}
+}
+
+//---------------------------------------------------------------
+.projects-slider {
+	// .projects-slider__slides
+	&__slides {
+		margin: 0px 0px rem(42) 0px;
+	}
+	// .projects-slider__slide
+	&__slide {
+	}
+	// .projects-slider__arrows
+	&__arrows {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(60);
+	}
+	// .projects-slider__arrow
+	&__arrow {
+		cursor: pointer;
+		padding: rem(12) rem(16);
+		display: inline-flex;
+		// .projects-slider__arrow_prev
+		&_prev {
+		}
+		// .projects-slider__arrow_next
+		&_next {
+		}
+	}
+	// .projects-slider__title
+	&__title {
+		font-size: rem(26);
+	}
+}
+
+//---------------------------------------------------------------
+.projects-slide {
+	display: grid;
+	grid-template-columns: 55% 1fr;
+	border-radius: rem(30);
+	overflow: hidden;
+	// .projects-slide__content
+	&__content {
+		color: #fff;
+		background: var(--color-main);
+		padding: rem(60);
+	}
+	// .projects-slide__title
+	&__title {
+		color: #fff;
+		font-family: "Circe";
+		font-size: rem(32);
+		font-weight: 700;
+		line-height: normal;
+		margin: 0px 0px rem(30) 0px;
+	}
+	// .projects-slide__text
+	&__text {
+		font-size: rem(21);
+		font-weight: 500;
+		line-height: 171.429%;
+	}
+	// .projects-slide__img
+	&__img {
+		height: 100%;
 	}
 }
 
