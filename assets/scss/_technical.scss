@@ -2,16 +2,19 @@
  * Устанавливает ограничение блоку по ширине
  */
 ._container {
-	max-width: rem($maxWidthContainer);
+	max-width: rem(1470);
 	margin: 0 auto;
-	padding: 0px px($containerPadding);
+	padding: 0px px(60);
 	@media (max-width: em($md2)) {
+		max-width: rem(1430);
 		padding: 0px px(40);
 	}
 	@media (max-width: em($md3)) {
+		max-width: rem(1400);
 		padding: 0px px(25);
 	}
 	@media (max-width: em($md3)) {
+		max-width: rem(1380);
 		padding: 0px px(15);
 	}
 }
@@ -19,16 +22,19 @@
  * Устанавливает ограничение блоку по ширине
  */
 ._container-long {
-	max-width: rem(1606);
+	max-width: rem(1726);
 	margin: 0 auto;
-	padding: 0px px($containerPadding);
+	padding: 0px px(60);
 	@media (max-width: em($md2)) {
+		max-width: rem(1686);
 		padding: 0px px(40);
 	}
 	@media (max-width: em($md3)) {
+		max-width: rem(1656);
 		padding: 0px px(25);
 	}
 	@media (max-width: em($md3)) {
+		max-width: rem(1636);
 		padding: 0px px(15);
 	}
 }
@@ -36,16 +42,19 @@
  * Устанавливает ограничение блоку по ширине
  */
 ._container-longer {
-	max-width: rem(1803);
+	max-width: rem(1923);
 	margin: 0 auto;
-	padding: 0px px($containerPadding);
+	padding: 0px px(60);
 	@media (max-width: em($md2)) {
+		max-width: rem(1883);
 		padding: 0px px(40);
 	}
 	@media (max-width: em($md3)) {
+		max-width: rem(1853);
 		padding: 0px px(25);
 	}
 	@media (max-width: em($md3)) {
+		max-width: rem(1833);
 		padding: 0px px(15);
 	}
 }

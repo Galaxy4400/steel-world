@@ -793,3 +793,152 @@
 }
 
 //===============================================================
+.how {
+	background: #fff;
+	padding: rem(90) 0 rem(180);
+	@media (max-width: em($md2)) {
+		padding: rem(100) rem(0);
+	}
+	@media (max-width: em($md3)) {
+		padding: rem(50) rem(0);
+	}
+	// .how__container
+	&__container {
+	}
+	// .how__title
+	&__title {
+		text-align: center;
+		margin: 0px 0px rem(90) 0px;
+		@media (max-width: em($md1)) {
+			margin: 0px 0px rem(70) 0px;
+		}
+		@media (max-width: em($md2)) {
+			margin: 0px 0px rem(50) 0px;
+		}
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(30) 0px;
+		}
+	}
+	// .how__body
+	&__body {
+		display: flex;
+		@media (max-width: em($md1)) {
+			display: grid;
+			gap: rem(36);
+		}
+		@media (max-width: em($md2)) {
+			gap: rem(28);
+		}
+		@media (max-width: em($md3)) {
+			gap: rem(20);
+		}
+	}
+	// .how__left
+	&__left {
+		display: grid;
+		gap: rem(36);
+		flex: 0 1 50%;
+		text-align: right;
+		@media (max-width: em($md1)) {
+			text-align: left;
+			order: 1;
+		}
+		@media (max-width: em($md2)) {
+			gap: rem(28);
+		}
+		@media (max-width: em($md3)) {
+			gap: rem(20);
+		}
+	}
+	// .how__center
+	&__center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		flex: 1 1 auto;
+		padding: 0px rem(50);
+		align-self: center;
+		@media (max-width: em($md0)) {
+			padding: 0px rem(30);
+		}
+		@media (max-width: em($md1)) {
+			padding: rem(20) 0px 0px 0px;
+			order: 3;
+		}
+		@media (max-width: em($md3)) {
+		}
+	}
+	// .how__img
+	&__img {
+		width: rem(400);
+		height: rem(400);
+		border-radius: 50%;
+		border: rem(20) solid #f1f1f3;
+		overflow: hidden;
+		@media (max-width: em($md0)) {
+			width: rem(300);
+			height: rem(300);
+		}
+		@media (max-width: em($md1)) {
+			width: rem(400);
+			height: rem(400);
+		}
+		@media (max-width: em($md3)) {
+			width: rem(300);
+			height: rem(300);
+		}
+	}
+	// .how__btn
+	&__btn {
+		position: absolute;
+		bottom: 20%;
+		left: 50%;
+		translate: -50% 0;
+		height: rem(56);
+		font-size: rem(21);
+		@media (max-width: em($md1)) {
+			bottom: 50%;
+			left: 50%;
+			translate: -50% 100%;
+		}
+		@media (max-width: em($md3)) {
+			height: rem(32);
+			font-size: rem(18);
+			padding: rem(5) rem(15);
+			white-space: nowrap;
+		}
+	}
+	// .how__right
+	&__right {
+		display: grid;
+		gap: rem(36);
+		flex: 0 1 50%;
+		@media (max-width: em($md1)) {
+			order: 2;
+		}
+		@media (max-width: em($md2)) {
+			gap: rem(28);
+		}
+		@media (max-width: em($md3)) {
+			gap: rem(20);
+		}
+	}
+}
+
+//---------------------------------------------------------------
+.how-item {
+	// .how-item__title
+	&__title {
+	}
+	// .how-item__text
+	&__text {
+		font-size: rem(18);
+		line-height: 144.444%;
+		@media (max-width: em($md3)) {
+			font-size: rem(16);
+		}
+	}
+}
+
+//===============================================================

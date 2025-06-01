@@ -96,13 +96,17 @@ body {
 	.h3,
 	h3 a,
 	h3 {
-		color: #000;
-		text-align: center;
+		color: var(--color-titles);
 		font-family: "Cera Pro";
-		font-size: 58px;
-		font-style: normal;
+		font-size: rem(32);
 		font-weight: 700;
 		line-height: normal;
+		@media (max-width: em($md2)) {
+			font-size: rem(26);
+		}
+		@media (max-width: em($md3)) {
+			font-size: rem(20);
+		}
 	}
 	.h4,
 	h4 a,
