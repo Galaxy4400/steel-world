@@ -97,6 +97,40 @@ function updateSlideTitle(swiper) {
 	titleContainer.textContent = title;
 }
 
+/**
+ * Инициализация слайдера
+ */
+const partnersSlider = new Swiper(".partners-slider", {
+	speed: 1000,
+	navigation: {
+		prevEl: ".partners__arrow_prev",
+		nextEl: ".partners__arrow_next",
+		disabledClass: "_disabled",
+	},
+	breakpoints: {
+		320: {
+			spaceBetween: 16,
+			slidesPerView: 1,
+		},
+		480: {
+			spaceBetween: 16,
+			slidesPerView: 2,
+		},
+		768: {
+			spaceBetween: 24,
+			slidesPerView: 3,
+		},
+		992: {
+			spaceBetween: 32,
+			slidesPerView: 4,
+		},
+		1201: {
+			spaceBetween: 32,
+			slidesPerView: 5,
+		},
+	},
+});
+
 // /**
 //  * Пример инициализации слайдера
 //  */

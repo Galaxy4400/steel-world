@@ -23,7 +23,7 @@
 			background: var(--color-main-dark);
 		}
 	}
-	@media (max-width: em($md2)) {
+	@media (max-width: em($md3)) {
 		height: rem(32);
 		font-size: rem(18);
 	}
@@ -83,14 +83,13 @@ textarea {
 .input {
 	display: block;
 	width: 100%;
-	font-size: rem(16);
-	line-height: prc(20, 16);
-	padding: em(10) em(12);
-	height: em(43, 16);
+	font-size: rem(21);
+	padding: rem(10) rem(30);
+	height: rem(56);
 	color: #000000;
 	background: #ffffff;
-	border: rem(1) solid #cccccc;
-	border-radius: rem(4);
+	border: rem(1) solid transparent;
+	border-radius: rem(999);
 	transition: border 0.3s ease 0s;
 	&:focus {
 		border: rem(1) solid var(--color-focus);
@@ -114,6 +113,12 @@ textarea {
 	&._mask {
 		letter-spacing: var(--mask-letter-spacing);
 	}
+
+	// .input_black
+	&_black {
+		background: #000;
+		color: #fff;
+	}
 }
 
 //===============================================================
@@ -122,8 +127,9 @@ textarea {
  */
 textarea.input {
 	resize: none;
-	padding: em(10);
-	min-height: em(60);
+	padding: rem(15) rem(30);
+	min-height: em(112);
+	border-radius: rem(30);
 }
 
 //===============================================================
@@ -548,3 +554,5 @@ textarea.input {
 		// ...
 	}
 }
+
+//===============================================================

@@ -199,3 +199,8 @@
 	-webkit-line-clamp: var(--max-lines);
 	overflow: hidden;
 }
+
+//===============================================================
+.nowrap {
+	white-space: nowrap;
+}
