@@ -4,4 +4,7 @@ new Adapt();
 // Инициализация модального окна
 const modal = new Modal({ animation: "fadeIn" });
 
-new Menu("menu");
+new Menu("menu", {
+	lockOnOpen: false,
+	closeOnSelect: true,
+});

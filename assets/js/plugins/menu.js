@@ -8,7 +8,7 @@
  */
 
 class Menu {
-	constructor (selector, options) {
+	constructor(selector, options) {
 		const defaultOptions = {
 			lockOnOpen: true,
 			closeOnSelect: false,
@@ -19,12 +19,12 @@ class Menu {
 		this.options = Object.assign(defaultOptions, options);
 
 		this.classes = {
-			lock: '_lock',
-			hover: '_hover',
-			visible: '_visible',
-			active: '_active',
-			toright: '_toright',
-			toleft: '_toleft',
+			lock: "_lock",
+			hover: "_hover",
+			visible: "_visible",
+			active: "_active",
+			toright: "_toright",
+			toleft: "_toleft",
 		};
 
 		this.selector = selector;
@@ -38,11 +38,11 @@ class Menu {
 
 		this.elements.icon = document.querySelector(`[data-menu-icon="${selector}"]`);
 		this.elements.container = document.querySelector(`[data-menu-container="${selector}"]`);
-		this.elements.items = this.elements.menu.querySelectorAll('[data-menu-item]');
-		this.elements.controls = this.elements.menu.querySelectorAll('[data-menu-control]');
-		this.elements.submenus = this.elements.menu.querySelectorAll('[data-menu-submenu]');
-		this.elements.close = this.elements.menu.querySelector('[data-menu-close]');
-		this.elements.backControls = this.elements.menu.querySelectorAll('[data-menu-back]');
+		this.elements.items = this.elements.menu.querySelectorAll("[data-menu-item]");
+		this.elements.controls = this.elements.menu.querySelectorAll("[data-menu-control]");
+		this.elements.submenus = this.elements.menu.querySelectorAll("[data-menu-submenu]");
+		this.elements.close = this.elements.menu.querySelector("[data-menu-close]");
+		this.elements.backControls = this.elements.menu.querySelectorAll("[data-menu-back]");
 
 		this.#itemsActions();
 		this.#controlsActions();
@@ -51,120 +51,113 @@ class Menu {
 		this.#closeActions();
 		this.#outsideActions();
 		this.#insideActions();
-		
+
 		this.#init();
 	}
 
-
 	/**
-	* Инициализация начального состояния меню
-	*/
+	 * Инициализация начального состояния меню
+	 */
 	#init() {
 		const isMenuOpen = this.options.isOpen;
 
 		if (isMenuOpen) this.#openMenu();
 
-		this.elements.submenus.forEach(submenu => this.#setSubemenuOpenSideClass(submenu));
+		this.elements.submenus.forEach((submenu) => this.#setSubemenuOpenSideClass(submenu));
 	}
 
-	
 	/**
-	* Обработка событий пунктов меню
-	*/
+	 * Обработка событий пунктов меню
+	 */
 	#itemsActions() {
 		// Действие при наведении курсора мыши на пункт меню
 		const onItemMouseenterAction = (item) => {
 			if (this.#isTouchScreen()) return;
 			if (this.#isLastLevel(item)) return;
 
-			item.querySelector('[data-menu-control]').classList.add(this.classes.hover);
-			item.querySelector('[data-menu-submenu]').classList.add(this.classes.visible);
+			item.querySelector("[data-menu-control]").classList.add(this.classes.hover);
+			item.querySelector("[data-menu-submenu]").classList.add(this.classes.visible);
 		};
 
 		// Действие на увод курсора мыши с пункта меню
 		const onItemMouseleaveAction = (item) => {
 			if (this.#isTouchScreen()) return;
 			if (this.#isLastLevel(item)) return;
-			
-			item.querySelector('[data-menu-control]').classList.remove(this.classes.hover);
-			item.querySelector('[data-menu-submenu]').classList.remove(this.classes.visible);
+
+			item.querySelector("[data-menu-control]").classList.remove(this.classes.hover);
+			item.querySelector("[data-menu-submenu]").classList.remove(this.classes.visible);
 		};
-		
+
 		// Инициализация событий пунктов меню
-		this.elements.items.forEach(item => {
-			item.addEventListener('mouseenter', () => onItemMouseenterAction(item));
-			item.addEventListener('mouseleave', () => onItemMouseleaveAction(item));
+		this.elements.items.forEach((item) => {
+			item.addEventListener("mouseenter", () => onItemMouseenterAction(item));
+			item.addEventListener("mouseleave", () => onItemMouseleaveAction(item));
 		});
 	}
 
-
 	/**
-	* Обработка событий элементов управления подпунктами меню
-	*/
+	 * Обработка событий элементов управления подпунктами меню
+	 */
 	#controlsActions() {
 		// Действие при клике по элементу управления подпунктом меню
 		const onControlClick = (control) => {
 			if (!this.#isTouchScreen()) return;
 
-			const item = control.closest('[data-menu-item]');
+			const item = control.closest("[data-menu-item]");
 
 			this.#isItemActive(item) ? this.#closeItem(item) : this.#openItem(item);
 		};
 
 		// Инициализация событий элементов управления подпунктов меню
-		this.elements.controls.forEach(control => {
-			control.addEventListener('click', () => onControlClick(control))
+		this.elements.controls.forEach((control) => {
+			control.addEventListener("click", () => onControlClick(control));
 		});
 	}
 
-
 	/**
-	* Обработка событий иконки меню
-	*/
+	 * Обработка событий иконки меню
+	 */
 	#iconActions() {
 		if (!this.elements.icon) return;
 
 		// Действие при клике по иконке меню
 		const onIconClick = () => {
 			this.#isMenuOpen() ? this.#closeMenu() : this.#openMenu();
-		}
+		};
 
 		// Инициализация события иконки меню
-		this.elements.icon.addEventListener('click', () => onIconClick());
+		this.elements.icon.addEventListener("click", () => onIconClick());
 	}
-	
 
 	/**
-	* Обработка кнопок возврата к предыдущему уровню меню на мобильной версии
-	*/
+	 * Обработка кнопок возврата к предыдущему уровню меню на мобильной версии
+	 */
 	#backsActions() {
 		// Действие при клике по иконке возврата
 		const onBackClick = (backControl) => {
-			const menuItem = backControl.closest('[data-menu-item]');
-			
+			const menuItem = backControl.closest("[data-menu-item]");
+
 			this.#closeItem(menuItem);
 		};
 
 		// Инициализация событий кнопок возврата к предыдущему уровню меню
-		this.elements.backControls.forEach(backControl => {
-			backControl.addEventListener('click', () => onBackClick(backControl));
+		this.elements.backControls.forEach((backControl) => {
+			backControl.addEventListener("click", () => onBackClick(backControl));
 		});
 	}
 
-
 	/**
-	* Обработка кнопки закрытия меню
-	*/
+	 * Обработка кнопки закрытия меню
+	 */
 	#closeActions() {
 		if (!this.elements.close) return;
 
-		this.elements.close.addEventListener('click', () => this.#closeMenu.call(this));
+		this.elements.close.addEventListener("click", () => this.#closeMenu.call(this));
 	}
 
-
 	/**
-	* Обработка событий вне области меню или связанных с ним элементов
-	*/
+	 * Обработка событий вне области меню или связанных с ним элементов
+	 */
 	#outsideActions() {
 		// Действие при клике вне области меню
 		const onOutsideClick = (event) => {
@@ -181,13 +174,12 @@ class Menu {
 		};
 
 		// Инициализация события клика вне области меню
-		document.addEventListener('click', onOutsideClick);
+		document.addEventListener("click", onOutsideClick);
 	}
 
-
 	/**
-	* Обработка событий внутри области меню
-	*/
+	 * Обработка событий внутри области меню
+	 */
 	#insideActions() {
 		// Действие при клике внутри области меню
 		const onContainerClick = (event) => {
@@ -195,7 +187,7 @@ class Menu {
 
 			const isTargetMenuItem = this.#isMenuItem(target);
 			if (!isTargetMenuItem) return;
-			
+
 			const isCloseOnSelect = this.options.closeOnSelect;
 			if (!isCloseOnSelect) return;
 
@@ -203,9 +195,8 @@ class Menu {
 		};
 
 		// Инициализация события клика внутри области меню
-		this.elements.container.addEventListener('click', onContainerClick)
+		this.elements.container.addEventListener("click", onContainerClick);
 	}
-
 
 	/**
 	 * Открыть меню
@@ -223,13 +214,12 @@ class Menu {
 		if (isLockOnOpen) this.#disableScroll();
 	}
 
-
 	/**
 	 * Закрыть меню
 	 */
 	#closeMenu() {
 		if (!this.isOpen) return;
-		
+
 		this.elements.icon.classList.remove(this.classes.active);
 		this.elements.container.classList.remove(this.classes.active);
 
@@ -239,7 +229,6 @@ class Menu {
 
 		if (isLockOnOpen) this.#enableScroll();
 	}
-	
 
 	/**
 	 * Открыть подменю
@@ -254,7 +243,6 @@ class Menu {
 		this.#closeOtherItems(item);
 	}
 
-
 	/**
 	 * Закрыть подменю
 	 */
@@ -262,11 +250,10 @@ class Menu {
 		const { controls, submenus, items } = this.#getItemSubElementsAll(item);
 
 		item.classList.remove(this.classes.active);
-		items.forEach(item => item.classList.remove(this.classes.active));
-		controls.forEach(control => control.classList.remove(this.classes.hover));
-		submenus.forEach(submenu => submenu.classList.remove(this.classes.visible));
+		items.forEach((item) => item.classList.remove(this.classes.active));
+		controls.forEach((control) => control.classList.remove(this.classes.hover));
+		submenus.forEach((submenu) => submenu.classList.remove(this.classes.visible));
 	}
-
 
 	/**
 	 * Закрыть все подменю
@@ -274,9 +261,8 @@ class Menu {
 	#closeItems() {
 		const rootItems = this.#getRootItems();
 
-		rootItems.forEach(item => this.#closeItem(item));
+		rootItems.forEach((item) => this.#closeItem(item));
 	}
-
 
 	/**
 	 * Закрыть все элементы меню кроме текущего
@@ -285,56 +271,51 @@ class Menu {
 		const rootItem = this.#getRootItem(item);
 		const rootItems = this.#getRootItems();
 
-		rootItems.forEach(item => {
+		rootItems.forEach((item) => {
 			if (!item.isSameNode(rootItem)) this.#closeItem(item);
 		});
 	}
-
 
 	/**
 	 * Получить пункт меню первого уровня относительно текущего элемента
 	 */
 	#getRootItem(item) {
-		const parentItem = item.parentElement.closest('[data-menu-item]');
+		const parentItem = item.parentElement.closest("[data-menu-item]");
 
 		if (!parentItem) return item;
 
 		return this.#getRootItem(parentItem);
 	}
 
-
 	/**
 	 * Получить все пункты меню первого уровня
 	 */
 	#getRootItems() {
-		return Object.values(this.elements.items).filter(item => {
-			return !item.parentElement.closest('[data-menu-item]');
+		return Object.values(this.elements.items).filter((item) => {
+			return !item.parentElement.closest("[data-menu-item]");
 		});
 	}
 
-	
 	/**
 	 * Получить объект элементов, связанных с подменю текущего пункта меню
 	 */
 	#getItemSubElements(item) {
-		const control = item.querySelector('[data-menu-control]');
-		const submenu = item.querySelector('[data-menu-submenu]');
+		const control = item.querySelector("[data-menu-control]");
+		const submenu = item.querySelector("[data-menu-submenu]");
 
 		return { control, submenu };
 	}
-	
 
 	/**
 	 * Получить объект элементов, связанных со всеми подменю текущего пункта меню на всю глубину
 	 */
 	#getItemSubElementsAll(item) {
-		const controls = item.querySelectorAll('[data-menu-control]');
-		const submenus = item.querySelectorAll('[data-menu-submenu]');
-		const items = item.querySelectorAll('[data-menu-item]');
+		const controls = item.querySelectorAll("[data-menu-control]");
+		const submenus = item.querySelectorAll("[data-menu-submenu]");
+		const items = item.querySelectorAll("[data-menu-item]");
 
 		return { controls, submenus, items };
 	}
-
 
 	/**
 	 * Зафиксировать пролистывание страницы
@@ -344,7 +325,6 @@ class Menu {
 		document.body.classList.add(this.classes.lock);
 	}
 
-
 	/**
 	 * Отменить фиксацию страницы
 	 */
@@ -353,14 +333,13 @@ class Menu {
 		document.body.classList.remove(this.classes.lock);
 	}
 
-
 	/**
-	* Фиксация абсолютно-позиционизируемых элементов содержащих соответствующий атрибут: data-fix, data-fix-m
-	*/
+	 * Фиксация абсолютно-позиционизируемых элементов содержащих соответствующий атрибут: data-fix, data-fix-m
+	 */
 	#lock() {
 		const fixBlocks = document.querySelectorAll(`[data-fix]`);
 		const fixBlocksM = document.querySelectorAll(`[data-fix-m]`);
-		const offset = window.innerWidth - document.body.offsetWidth + 'px';
+		const offset = window.innerWidth - document.body.offsetWidth + "px";
 		fixBlocks.forEach((el) => {
 			el.style.paddingRight = offset;
 		});
@@ -370,22 +349,20 @@ class Menu {
 		document.body.style.paddingRight = offset;
 	}
 
-	
 	/**
-	* Отмена Фиксации абсолютно-позиционизируемых элементов содержащих соответствующий атрибут: data-fix, data-fix-m
-	*/
+	 * Отмена Фиксации абсолютно-позиционизируемых элементов содержащих соответствующий атрибут: data-fix, data-fix-m
+	 */
 	#unlock() {
 		const fixBlocks = document.querySelectorAll(`[data-fix]`);
 		const fixBlocksM = document.querySelectorAll(`[data-fix-m]`);
 		fixBlocks.forEach((el) => {
-			el.style.paddingRight = '0px';
+			el.style.paddingRight = "0px";
 		});
 		fixBlocksM.forEach((el) => {
-			el.style.marginRight = '0px';
+			el.style.marginRight = "0px";
 		});
-		document.body.style.paddingRight = '0px';
+		document.body.style.paddingRight = "0px";
 	}
-
 
 	/**
 	 * Является ли пункт меню активным
@@ -394,30 +371,27 @@ class Menu {
 		return item.classList.contains(this.classes.active) ? true : false;
 	}
 
-
 	/**
 	 * Является ли нажатый элемент частю меню
 	 */
 	#isMenuElement(target) {
-		const icon = target.closest('[data-menu-icon]');
-		const container = target.closest('[data-menu-container]');
-		
+		const icon = target.closest("[data-menu-icon]");
+		const container = target.closest("[data-menu-container]");
+
 		if (icon?.isSameNode(this.elements.icon)) return true;
 		if (container?.isSameNode(this.elements.container)) return true;
 
 		return false;
 	}
 
-
 	/**
 	 * Является ли нажатый элемент пунксом меню
 	 */
 	#isMenuItem(target) {
-		const item = target.closest('[data-menu-item]');
+		const item = target.closest("[data-menu-item]");
 
 		return item ? true : false;
 	}
-
 
 	/**
 	 * Является ли контейнер меню активным
@@ -426,25 +400,22 @@ class Menu {
 		return this.isOpen;
 	}
 
-
 	/**
 	 * Является ли пункт меню последним по глубине
 	 */
 	#isLastLevel(item) {
-		const control = item.querySelector('[data-menu-control]');
-		const submenu = item.querySelector('[data-menu-submenu]');
+		const control = item.querySelector("[data-menu-control]");
+		const submenu = item.querySelector("[data-menu-submenu]");
 
-		return (control && submenu) ? false : true;
+		return control && submenu ? false : true;
 	}
-	
 
 	/**
 	 * Является ли устройство тачскриновым
 	 */
 	#isTouchScreen() {
-		return (window.matchMedia("(pointer: coarse)").matches) ? true : false;
+		return window.matchMedia("(pointer: coarse)").matches ? true : false;
 	}
-
 
 	/**
 	 * Установка элементу подменю класса, соответствущего тому, в какую сторону он будет открываться.
@@ -457,14 +428,12 @@ class Menu {
 		}
 	}
 
-
 	/**
 	 * Выходит ли правый край елемента за пределы экрана
 	 */
 	#isElementOutsideToRight(element) {
 		const elementRectangle = element.getBoundingClientRect();
-		
+
 		return elementRectangle.right >= document.documentElement.clientWidth ? true : false;
 	}
-
 }

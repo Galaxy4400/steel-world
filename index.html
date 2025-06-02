@@ -26,11 +26,11 @@
 						<div class="header__menu menu" data-menu="menu">
 							<nav class="menu__body" data-menu-container="menu">
 								<ul class="menu__list">
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Наша продукция</a></li>
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">О компании</a></li>
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Услуги</a></li>
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Наши проекты</a></li>
-									<li class="menu__item" data-menu-item><a class="menu__link" href="#">Контакты</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link" data-goto="catalog">Наша продукция</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link" data-goto="about">О компании</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link" data-goto="how">Услуги</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link" data-goto="projects">Наши проекты</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link" data-goto="form-section">Контакты</a></li>
 								</ul>
 								<div class="menu__actions">
 									<div class="menu__socials">
@@ -46,7 +46,7 @@
 										</a>
 									</div>
 									<a class="menu__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
-									<button class="menu__btn btn btn_trans" type="button">Заказать звонок</button>
+									<button class="menu__btn btn btn_trans" type="button" data-goto="form-section">Заказать звонок</button>
 								</div>
 							</nav>
 						</div>
@@ -64,7 +64,7 @@
 									</svg>
 								</a>
 							</div>
-							<button class="header__btn btn btn_trans" type="button">Заказать звонок</button>
+							<button class="header__btn btn btn_trans" type="button" data-goto="form-section">Заказать звонок</button>
 							<button class="menu-icon" type="button" data-menu-icon="menu"></button>
 						</div>
 					</div>
@@ -80,7 +80,7 @@
 							<div class="slide__container _container-long">
 								<div class="slide__content">
 									<h2 class="slide__title">Оптимизируйте пространство и снизьте затраты с профессиональным проектом склада</h2>
-									<button class="slide__btn btn" type="button">Получить проект склада</button>
+									<button class="slide__btn btn" type="button" data-goto="form-section">Получить проект склада</button>
 								</div>
 							</div>
 							<figure class="slide__bg _ibg">
@@ -91,7 +91,7 @@
 							<div class="slide__container _container-long">
 								<div class="slide__content">
 									<h2 class="slide__title">test</h2>
-									<button class="slide__btn btn" type="button">Получить проект склада</button>
+									<button class="slide__btn btn" type="button" data-goto="form-section">Получить проект склада</button>
 								</div>
 							</div>
 							<figure class="slide__bg _ibg">
@@ -153,7 +153,7 @@
 								<p class="catalog-item__desc">Краткое описание раздела 1-3 строки Кра-ткое описание раздела 1-3 строки </p>
 								<div class="catalog-item__actions">
 									<button class="catalog-item__btn btn btn_small btn_black" type="button" data-modal-opener="product-1">Посмотреть товары</button>
-									<button class="catalog-item__btn btn btn_small" type="button">Заказать проект</button>
+									<button class="catalog-item__btn btn btn_small" type="button" data-goto="form-section">Заказать проект</button>
 								</div>
 							</div>
 						</div>
@@ -174,7 +174,7 @@
 								<p class="catalog-item__desc">Краткое описание раздела 1-3 строки Кра-ткое описание раздела 1-3 строки </p>
 								<div class="catalog-item__actions">
 									<button class="catalog-item__btn btn btn_small btn_black" type="button" data-modal-opener="product-2">Посмотреть товары</button>
-									<button class="catalog-item__btn btn btn_small" type="button">Заказать проект</button>
+									<button class="catalog-item__btn btn btn_small" type="button" data-goto="form-section">Заказать проект</button>
 								</div>
 							</div>
 						</div>
@@ -195,7 +195,7 @@
 								<p class="catalog-item__desc">Краткое описание раздела 1-3 строки Кра-ткое описание раздела 1-3 строки </p>
 								<div class="catalog-item__actions">
 									<button class="catalog-item__btn btn btn_small btn_black" type="button" data-modal-opener="product-3">Посмотреть товары</button>
-									<button class="catalog-item__btn btn btn_small" type="button">Заказать проект</button>
+									<button class="catalog-item__btn btn btn_small" type="button" data-goto="form-section">Заказать проект</button>
 								</div>
 							</div>
 						</div>
@@ -216,7 +216,7 @@
 								<p class="catalog-item__desc">Краткое описание раздела 1-3 строки Кра-ткое описание раздела 1-3 строки </p>
 								<div class="catalog-item__actions">
 									<button class="catalog-item__btn btn btn_small btn_black" type="button" data-modal-opener="product-4">Посмотреть товары</button>
-									<button class="catalog-item__btn btn btn_small" type="button">Заказать проект</button>
+									<button class="catalog-item__btn btn btn_small" type="button" data-goto="form-section">Заказать проект</button>
 								</div>
 							</div>
 						</div>
@@ -237,7 +237,7 @@
 								<p class="catalog-item__desc">Краткое описание раздела 1-3 строки Кра-ткое описание раздела 1-3 строки </p>
 								<div class="catalog-item__actions">
 									<button class="catalog-item__btn btn btn_small btn_black" type="button" data-modal-opener="product-5">Посмотреть товары</button>
-									<button class="catalog-item__btn btn btn_small" type="button">Заказать проект</button>
+									<button class="catalog-item__btn btn btn_small" type="button" data-goto="form-section">Заказать проект</button>
 								</div>
 							</div>
 						</div>
@@ -258,7 +258,7 @@
 								<p class="catalog-item__desc">Краткое описание раздела 1-3 строки Кра-ткое описание раздела 1-3 строки </p>
 								<div class="catalog-item__actions">
 									<button class="catalog-item__btn btn btn_small btn_black" type="button" data-modal-opener="product-6">Посмотреть товары</button>
-									<button class="catalog-item__btn btn btn_small" type="button">Заказать проект</button>
+									<button class="catalog-item__btn btn btn_small" type="button" data-goto="form-section">Заказать проект</button>
 								</div>
 							</div>
 						</div>
@@ -279,7 +279,7 @@
 								<p class="catalog-item__desc">Краткое описание раздела 1-3 строки Кра-ткое описание раздела 1-3 строки </p>
 								<div class="catalog-item__actions">
 									<button class="catalog-item__btn btn btn_small btn_black" type="button" data-modal-opener="product-7">Посмотреть товары</button>
-									<button class="catalog-item__btn btn btn_small" type="button">Заказать проект</button>
+									<button class="catalog-item__btn btn btn_small" type="button" data-goto="form-section">Заказать проект</button>
 								</div>
 							</div>
 						</div>
@@ -323,7 +323,7 @@
 						</div>
 					</div>
 					<div class="about__footer">
-						<button class="about__btn btn" type="submit">Связаться с нами</button>
+						<button class="about__btn btn" type="button" data-goto="form-section">Связаться с нами</button>
 					</div>
 				</div>
 			</section>
@@ -354,7 +354,7 @@
 							<figure class="how__img _ibg">
 								<img src="assets/img/circle-img.jpg" alt="img">
 							</figure>
-							<button class="how__btn btn" type="button">Заказать проект</button>
+							<button class="how__btn btn" type="button" data-goto="form-section">Заказать проект</button>
 						</div>
 						<div class="how__right">
 							<div class="how__item how-item">
@@ -610,7 +610,7 @@
 							</div>
 						</div>
 						<div class="details-line__right">
-							<button class="details-line__btn line-btn" type="submit">
+							<button class="details-line__btn line-btn" type="button" data-goto="form-section">
 								<svg class="line-btn__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8146 3.76515C30.0225 3.56116 30.4025 3.40379 30.8925 3.41545C31.3142 3.41265 31.7219 3.56221 32.0364 3.83509C32.2964 4.08765 32.4804 4.49563 32.4984 4.95219C32.5164 5.40874 32.3684 5.75456 32.1644 5.95272L17.1852 20.5236L14.6393 20.749L14.8393 18.3302L29.8146 3.76515ZM34.1603 1.77574C33.2864 0.924797 32.0864 0.526526 30.9605 0.50127C29.8346 0.476014 28.5966 0.825715 27.6907 1.7058L12.3274 16.6497C12.0758 16.8944 11.922 17.218 11.8934 17.5628L11.5055 22.2391C11.4879 22.4508 11.5183 22.6637 11.5943 22.8628C11.6704 23.062 11.7904 23.2426 11.9458 23.3919C12.1013 23.5413 12.2885 23.6558 12.4943 23.7275C12.7002 23.7992 12.9196 23.8263 13.1374 23.8069L17.9971 23.3795C18.3474 23.3482 18.6751 23.1982 18.9231 22.956L34.2863 8.01208C35.1983 7.12617 35.5403 5.92747 35.4963 4.83562C35.4587 3.68965 34.9823 2.59854 34.1603 1.77574ZM5.62575 3.41545C4.2678 3.41903 2.96649 3.94453 2.00608 4.87714C1.04567 5.80976 0.504222 7.07369 0.5 8.39286V29.5206C0.503695 30.8401 1.04491 32.1046 2.00538 33.0376C2.96584 33.9706 4.26745 34.4964 5.62575 34.5H27.3747C28.7326 34.4964 30.0339 33.9709 30.9943 33.0383C31.9547 32.1057 32.4962 30.8418 32.5004 29.5226V18.9577C32.5004 18.5713 32.3424 18.2007 32.0611 17.9274C31.7798 17.6541 31.3983 17.5006 31.0005 17.5006C30.6027 17.5006 30.2212 17.6541 29.9399 17.9274C29.6586 18.2007 29.5006 18.5713 29.5006 18.9577V29.5226C29.5006 30.6533 28.5406 31.5858 27.3747 31.5858H5.62575C4.4598 31.5858 3.49985 30.6533 3.49985 29.5226V8.39286C3.49985 7.26216 4.4598 6.32962 5.62575 6.32962H16.4992C16.897 6.32962 17.2785 6.17611 17.5598 5.90285C17.8411 5.6296 17.9991 5.25898 17.9991 4.87254C17.9991 4.48609 17.8411 4.11548 17.5598 3.84222C17.2785 3.56896 16.897 3.41545 16.4992 3.41545H5.62575Z" fill="currentColor" />
 								</svg>
@@ -663,7 +663,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Cкладирования грузов как на паллетах всех типов, так и в ящиках, бочках, рулонах и т.д.</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Посмотреть товары в каталоге</a>
+												<a class="details-footer-item__btn btn" href="https://steel-world.ru" target="_blank">Посмотреть товары в каталоге</a>
 											</div>
 										</div>
 									</div>
@@ -676,7 +676,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Хранения как однотипных, так и комбинированных грузов, обеспечивая легкий доступ к каждому виду продукции</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Связаться с нами</a>
+												<button class="details-footer-item__btn btn" type="button" data-goto="form-section">Связаться с нами</button>
 											</div>
 										</div>
 									</div>
@@ -749,7 +749,7 @@
 							</div>
 						</div>
 						<div class="details-line__right">
-							<button class="details-line__btn line-btn" type="submit">
+							<button class="details-line__btn line-btn" type="button" data-goto="form-section">
 								<svg class="line-btn__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8146 3.76515C30.0225 3.56116 30.4025 3.40379 30.8925 3.41545C31.3142 3.41265 31.7219 3.56221 32.0364 3.83509C32.2964 4.08765 32.4804 4.49563 32.4984 4.95219C32.5164 5.40874 32.3684 5.75456 32.1644 5.95272L17.1852 20.5236L14.6393 20.749L14.8393 18.3302L29.8146 3.76515ZM34.1603 1.77574C33.2864 0.924797 32.0864 0.526526 30.9605 0.50127C29.8346 0.476014 28.5966 0.825715 27.6907 1.7058L12.3274 16.6497C12.0758 16.8944 11.922 17.218 11.8934 17.5628L11.5055 22.2391C11.4879 22.4508 11.5183 22.6637 11.5943 22.8628C11.6704 23.062 11.7904 23.2426 11.9458 23.3919C12.1013 23.5413 12.2885 23.6558 12.4943 23.7275C12.7002 23.7992 12.9196 23.8263 13.1374 23.8069L17.9971 23.3795C18.3474 23.3482 18.6751 23.1982 18.9231 22.956L34.2863 8.01208C35.1983 7.12617 35.5403 5.92747 35.4963 4.83562C35.4587 3.68965 34.9823 2.59854 34.1603 1.77574ZM5.62575 3.41545C4.2678 3.41903 2.96649 3.94453 2.00608 4.87714C1.04567 5.80976 0.504222 7.07369 0.5 8.39286V29.5206C0.503695 30.8401 1.04491 32.1046 2.00538 33.0376C2.96584 33.9706 4.26745 34.4964 5.62575 34.5H27.3747C28.7326 34.4964 30.0339 33.9709 30.9943 33.0383C31.9547 32.1057 32.4962 30.8418 32.5004 29.5226V18.9577C32.5004 18.5713 32.3424 18.2007 32.0611 17.9274C31.7798 17.6541 31.3983 17.5006 31.0005 17.5006C30.6027 17.5006 30.2212 17.6541 29.9399 17.9274C29.6586 18.2007 29.5006 18.5713 29.5006 18.9577V29.5226C29.5006 30.6533 28.5406 31.5858 27.3747 31.5858H5.62575C4.4598 31.5858 3.49985 30.6533 3.49985 29.5226V8.39286C3.49985 7.26216 4.4598 6.32962 5.62575 6.32962H16.4992C16.897 6.32962 17.2785 6.17611 17.5598 5.90285C17.8411 5.6296 17.9991 5.25898 17.9991 4.87254C17.9991 4.48609 17.8411 4.11548 17.5598 3.84222C17.2785 3.56896 16.897 3.41545 16.4992 3.41545H5.62575Z" fill="currentColor" />
 								</svg>
@@ -797,7 +797,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Cкладирования грузов как на паллетах всех типов, так и в ящиках, бочках, рулонах и т.д.</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Посмотреть товары в каталоге</a>
+												<a class="details-footer-item__btn btn" href="https://steel-world.ru" target="_blank">Посмотреть товары в каталоге</a>
 											</div>
 										</div>
 									</div>
@@ -810,7 +810,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Хранения как однотипных, так и комбинированных грузов, обеспечивая легкий доступ к каждому виду продукции</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Связаться с нами</a>
+												<button class="details-footer-item__btn btn" type="button" data-goto="form-section">Связаться с нами</button>
 											</div>
 										</div>
 									</div>
@@ -883,7 +883,7 @@
 							</div>
 						</div>
 						<div class="details-line__right">
-							<button class="details-line__btn line-btn" type="submit">
+							<button class="details-line__btn line-btn" type="button" data-goto="form-section">
 								<svg class="line-btn__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8146 3.76515C30.0225 3.56116 30.4025 3.40379 30.8925 3.41545C31.3142 3.41265 31.7219 3.56221 32.0364 3.83509C32.2964 4.08765 32.4804 4.49563 32.4984 4.95219C32.5164 5.40874 32.3684 5.75456 32.1644 5.95272L17.1852 20.5236L14.6393 20.749L14.8393 18.3302L29.8146 3.76515ZM34.1603 1.77574C33.2864 0.924797 32.0864 0.526526 30.9605 0.50127C29.8346 0.476014 28.5966 0.825715 27.6907 1.7058L12.3274 16.6497C12.0758 16.8944 11.922 17.218 11.8934 17.5628L11.5055 22.2391C11.4879 22.4508 11.5183 22.6637 11.5943 22.8628C11.6704 23.062 11.7904 23.2426 11.9458 23.3919C12.1013 23.5413 12.2885 23.6558 12.4943 23.7275C12.7002 23.7992 12.9196 23.8263 13.1374 23.8069L17.9971 23.3795C18.3474 23.3482 18.6751 23.1982 18.9231 22.956L34.2863 8.01208C35.1983 7.12617 35.5403 5.92747 35.4963 4.83562C35.4587 3.68965 34.9823 2.59854 34.1603 1.77574ZM5.62575 3.41545C4.2678 3.41903 2.96649 3.94453 2.00608 4.87714C1.04567 5.80976 0.504222 7.07369 0.5 8.39286V29.5206C0.503695 30.8401 1.04491 32.1046 2.00538 33.0376C2.96584 33.9706 4.26745 34.4964 5.62575 34.5H27.3747C28.7326 34.4964 30.0339 33.9709 30.9943 33.0383C31.9547 32.1057 32.4962 30.8418 32.5004 29.5226V18.9577C32.5004 18.5713 32.3424 18.2007 32.0611 17.9274C31.7798 17.6541 31.3983 17.5006 31.0005 17.5006C30.6027 17.5006 30.2212 17.6541 29.9399 17.9274C29.6586 18.2007 29.5006 18.5713 29.5006 18.9577V29.5226C29.5006 30.6533 28.5406 31.5858 27.3747 31.5858H5.62575C4.4598 31.5858 3.49985 30.6533 3.49985 29.5226V8.39286C3.49985 7.26216 4.4598 6.32962 5.62575 6.32962H16.4992C16.897 6.32962 17.2785 6.17611 17.5598 5.90285C17.8411 5.6296 17.9991 5.25898 17.9991 4.87254C17.9991 4.48609 17.8411 4.11548 17.5598 3.84222C17.2785 3.56896 16.897 3.41545 16.4992 3.41545H5.62575Z" fill="currentColor" />
 								</svg>
@@ -931,7 +931,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Cкладирования грузов как на паллетах всех типов, так и в ящиках, бочках, рулонах и т.д.</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Посмотреть товары в каталоге</a>
+												<a class="details-footer-item__btn btn" href="https://steel-world.ru" target="_blank">Посмотреть товары в каталоге</a>
 											</div>
 										</div>
 									</div>
@@ -944,7 +944,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Хранения как однотипных, так и комбинированных грузов, обеспечивая легкий доступ к каждому виду продукции</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Связаться с нами</a>
+												<button class="details-footer-item__btn btn" type="button" data-goto="form-section">Связаться с нами</button>
 											</div>
 										</div>
 									</div>
@@ -1017,7 +1017,7 @@
 							</div>
 						</div>
 						<div class="details-line__right">
-							<button class="details-line__btn line-btn" type="submit">
+							<button class="details-line__btn line-btn" type="button" data-goto="form-section">
 								<svg class="line-btn__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8146 3.76515C30.0225 3.56116 30.4025 3.40379 30.8925 3.41545C31.3142 3.41265 31.7219 3.56221 32.0364 3.83509C32.2964 4.08765 32.4804 4.49563 32.4984 4.95219C32.5164 5.40874 32.3684 5.75456 32.1644 5.95272L17.1852 20.5236L14.6393 20.749L14.8393 18.3302L29.8146 3.76515ZM34.1603 1.77574C33.2864 0.924797 32.0864 0.526526 30.9605 0.50127C29.8346 0.476014 28.5966 0.825715 27.6907 1.7058L12.3274 16.6497C12.0758 16.8944 11.922 17.218 11.8934 17.5628L11.5055 22.2391C11.4879 22.4508 11.5183 22.6637 11.5943 22.8628C11.6704 23.062 11.7904 23.2426 11.9458 23.3919C12.1013 23.5413 12.2885 23.6558 12.4943 23.7275C12.7002 23.7992 12.9196 23.8263 13.1374 23.8069L17.9971 23.3795C18.3474 23.3482 18.6751 23.1982 18.9231 22.956L34.2863 8.01208C35.1983 7.12617 35.5403 5.92747 35.4963 4.83562C35.4587 3.68965 34.9823 2.59854 34.1603 1.77574ZM5.62575 3.41545C4.2678 3.41903 2.96649 3.94453 2.00608 4.87714C1.04567 5.80976 0.504222 7.07369 0.5 8.39286V29.5206C0.503695 30.8401 1.04491 32.1046 2.00538 33.0376C2.96584 33.9706 4.26745 34.4964 5.62575 34.5H27.3747C28.7326 34.4964 30.0339 33.9709 30.9943 33.0383C31.9547 32.1057 32.4962 30.8418 32.5004 29.5226V18.9577C32.5004 18.5713 32.3424 18.2007 32.0611 17.9274C31.7798 17.6541 31.3983 17.5006 31.0005 17.5006C30.6027 17.5006 30.2212 17.6541 29.9399 17.9274C29.6586 18.2007 29.5006 18.5713 29.5006 18.9577V29.5226C29.5006 30.6533 28.5406 31.5858 27.3747 31.5858H5.62575C4.4598 31.5858 3.49985 30.6533 3.49985 29.5226V8.39286C3.49985 7.26216 4.4598 6.32962 5.62575 6.32962H16.4992C16.897 6.32962 17.2785 6.17611 17.5598 5.90285C17.8411 5.6296 17.9991 5.25898 17.9991 4.87254C17.9991 4.48609 17.8411 4.11548 17.5598 3.84222C17.2785 3.56896 16.897 3.41545 16.4992 3.41545H5.62575Z" fill="currentColor" />
 								</svg>
@@ -1065,7 +1065,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Cкладирования грузов как на паллетах всех типов, так и в ящиках, бочках, рулонах и т.д.</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Посмотреть товары в каталоге</a>
+												<a class="details-footer-item__btn btn" href="https://steel-world.ru" target="_blank">Посмотреть товары в каталоге</a>
 											</div>
 										</div>
 									</div>
@@ -1078,7 +1078,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Хранения как однотипных, так и комбинированных грузов, обеспечивая легкий доступ к каждому виду продукции</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Связаться с нами</a>
+												<button class="details-footer-item__btn btn" type="button" data-goto="form-section">Связаться с нами</button>
 											</div>
 										</div>
 									</div>
@@ -1151,7 +1151,7 @@
 							</div>
 						</div>
 						<div class="details-line__right">
-							<button class="details-line__btn line-btn" type="submit">
+							<button class="details-line__btn line-btn" type="button" data-goto="form-section">
 								<svg class="line-btn__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8146 3.76515C30.0225 3.56116 30.4025 3.40379 30.8925 3.41545C31.3142 3.41265 31.7219 3.56221 32.0364 3.83509C32.2964 4.08765 32.4804 4.49563 32.4984 4.95219C32.5164 5.40874 32.3684 5.75456 32.1644 5.95272L17.1852 20.5236L14.6393 20.749L14.8393 18.3302L29.8146 3.76515ZM34.1603 1.77574C33.2864 0.924797 32.0864 0.526526 30.9605 0.50127C29.8346 0.476014 28.5966 0.825715 27.6907 1.7058L12.3274 16.6497C12.0758 16.8944 11.922 17.218 11.8934 17.5628L11.5055 22.2391C11.4879 22.4508 11.5183 22.6637 11.5943 22.8628C11.6704 23.062 11.7904 23.2426 11.9458 23.3919C12.1013 23.5413 12.2885 23.6558 12.4943 23.7275C12.7002 23.7992 12.9196 23.8263 13.1374 23.8069L17.9971 23.3795C18.3474 23.3482 18.6751 23.1982 18.9231 22.956L34.2863 8.01208C35.1983 7.12617 35.5403 5.92747 35.4963 4.83562C35.4587 3.68965 34.9823 2.59854 34.1603 1.77574ZM5.62575 3.41545C4.2678 3.41903 2.96649 3.94453 2.00608 4.87714C1.04567 5.80976 0.504222 7.07369 0.5 8.39286V29.5206C0.503695 30.8401 1.04491 32.1046 2.00538 33.0376C2.96584 33.9706 4.26745 34.4964 5.62575 34.5H27.3747C28.7326 34.4964 30.0339 33.9709 30.9943 33.0383C31.9547 32.1057 32.4962 30.8418 32.5004 29.5226V18.9577C32.5004 18.5713 32.3424 18.2007 32.0611 17.9274C31.7798 17.6541 31.3983 17.5006 31.0005 17.5006C30.6027 17.5006 30.2212 17.6541 29.9399 17.9274C29.6586 18.2007 29.5006 18.5713 29.5006 18.9577V29.5226C29.5006 30.6533 28.5406 31.5858 27.3747 31.5858H5.62575C4.4598 31.5858 3.49985 30.6533 3.49985 29.5226V8.39286C3.49985 7.26216 4.4598 6.32962 5.62575 6.32962H16.4992C16.897 6.32962 17.2785 6.17611 17.5598 5.90285C17.8411 5.6296 17.9991 5.25898 17.9991 4.87254C17.9991 4.48609 17.8411 4.11548 17.5598 3.84222C17.2785 3.56896 16.897 3.41545 16.4992 3.41545H5.62575Z" fill="currentColor" />
 								</svg>
@@ -1199,7 +1199,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Cкладирования грузов как на паллетах всех типов, так и в ящиках, бочках, рулонах и т.д.</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Посмотреть товары в каталоге</a>
+												<a class="details-footer-item__btn btn" href="https://steel-world.ru" target="_blank">Посмотреть товары в каталоге</a>
 											</div>
 										</div>
 									</div>
@@ -1212,7 +1212,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Хранения как однотипных, так и комбинированных грузов, обеспечивая легкий доступ к каждому виду продукции</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Связаться с нами</a>
+												<button class="details-footer-item__btn btn" type="button" data-goto="form-section">Связаться с нами</button>
 											</div>
 										</div>
 									</div>
@@ -1285,7 +1285,7 @@
 							</div>
 						</div>
 						<div class="details-line__right">
-							<button class="details-line__btn line-btn" type="submit">
+							<button class="details-line__btn line-btn" type="button" data-goto="form-section">
 								<svg class="line-btn__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8146 3.76515C30.0225 3.56116 30.4025 3.40379 30.8925 3.41545C31.3142 3.41265 31.7219 3.56221 32.0364 3.83509C32.2964 4.08765 32.4804 4.49563 32.4984 4.95219C32.5164 5.40874 32.3684 5.75456 32.1644 5.95272L17.1852 20.5236L14.6393 20.749L14.8393 18.3302L29.8146 3.76515ZM34.1603 1.77574C33.2864 0.924797 32.0864 0.526526 30.9605 0.50127C29.8346 0.476014 28.5966 0.825715 27.6907 1.7058L12.3274 16.6497C12.0758 16.8944 11.922 17.218 11.8934 17.5628L11.5055 22.2391C11.4879 22.4508 11.5183 22.6637 11.5943 22.8628C11.6704 23.062 11.7904 23.2426 11.9458 23.3919C12.1013 23.5413 12.2885 23.6558 12.4943 23.7275C12.7002 23.7992 12.9196 23.8263 13.1374 23.8069L17.9971 23.3795C18.3474 23.3482 18.6751 23.1982 18.9231 22.956L34.2863 8.01208C35.1983 7.12617 35.5403 5.92747 35.4963 4.83562C35.4587 3.68965 34.9823 2.59854 34.1603 1.77574ZM5.62575 3.41545C4.2678 3.41903 2.96649 3.94453 2.00608 4.87714C1.04567 5.80976 0.504222 7.07369 0.5 8.39286V29.5206C0.503695 30.8401 1.04491 32.1046 2.00538 33.0376C2.96584 33.9706 4.26745 34.4964 5.62575 34.5H27.3747C28.7326 34.4964 30.0339 33.9709 30.9943 33.0383C31.9547 32.1057 32.4962 30.8418 32.5004 29.5226V18.9577C32.5004 18.5713 32.3424 18.2007 32.0611 17.9274C31.7798 17.6541 31.3983 17.5006 31.0005 17.5006C30.6027 17.5006 30.2212 17.6541 29.9399 17.9274C29.6586 18.2007 29.5006 18.5713 29.5006 18.9577V29.5226C29.5006 30.6533 28.5406 31.5858 27.3747 31.5858H5.62575C4.4598 31.5858 3.49985 30.6533 3.49985 29.5226V8.39286C3.49985 7.26216 4.4598 6.32962 5.62575 6.32962H16.4992C16.897 6.32962 17.2785 6.17611 17.5598 5.90285C17.8411 5.6296 17.9991 5.25898 17.9991 4.87254C17.9991 4.48609 17.8411 4.11548 17.5598 3.84222C17.2785 3.56896 16.897 3.41545 16.4992 3.41545H5.62575Z" fill="currentColor" />
 								</svg>
@@ -1333,7 +1333,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Cкладирования грузов как на паллетах всех типов, так и в ящиках, бочках, рулонах и т.д.</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Посмотреть товары в каталоге</a>
+												<a class="details-footer-item__btn btn" href="https://steel-world.ru" target="_blank">Посмотреть товары в каталоге</a>
 											</div>
 										</div>
 									</div>
@@ -1346,7 +1346,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Хранения как однотипных, так и комбинированных грузов, обеспечивая легкий доступ к каждому виду продукции</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Связаться с нами</a>
+												<button class="details-footer-item__btn btn" type="button" data-goto="form-section">Связаться с нами</button>
 											</div>
 										</div>
 									</div>
@@ -1419,7 +1419,7 @@
 							</div>
 						</div>
 						<div class="details-line__right">
-							<button class="details-line__btn line-btn" type="submit">
+							<button class="details-line__btn line-btn" type="button" data-goto="form-section">
 								<svg class="line-btn__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8146 3.76515C30.0225 3.56116 30.4025 3.40379 30.8925 3.41545C31.3142 3.41265 31.7219 3.56221 32.0364 3.83509C32.2964 4.08765 32.4804 4.49563 32.4984 4.95219C32.5164 5.40874 32.3684 5.75456 32.1644 5.95272L17.1852 20.5236L14.6393 20.749L14.8393 18.3302L29.8146 3.76515ZM34.1603 1.77574C33.2864 0.924797 32.0864 0.526526 30.9605 0.50127C29.8346 0.476014 28.5966 0.825715 27.6907 1.7058L12.3274 16.6497C12.0758 16.8944 11.922 17.218 11.8934 17.5628L11.5055 22.2391C11.4879 22.4508 11.5183 22.6637 11.5943 22.8628C11.6704 23.062 11.7904 23.2426 11.9458 23.3919C12.1013 23.5413 12.2885 23.6558 12.4943 23.7275C12.7002 23.7992 12.9196 23.8263 13.1374 23.8069L17.9971 23.3795C18.3474 23.3482 18.6751 23.1982 18.9231 22.956L34.2863 8.01208C35.1983 7.12617 35.5403 5.92747 35.4963 4.83562C35.4587 3.68965 34.9823 2.59854 34.1603 1.77574ZM5.62575 3.41545C4.2678 3.41903 2.96649 3.94453 2.00608 4.87714C1.04567 5.80976 0.504222 7.07369 0.5 8.39286V29.5206C0.503695 30.8401 1.04491 32.1046 2.00538 33.0376C2.96584 33.9706 4.26745 34.4964 5.62575 34.5H27.3747C28.7326 34.4964 30.0339 33.9709 30.9943 33.0383C31.9547 32.1057 32.4962 30.8418 32.5004 29.5226V18.9577C32.5004 18.5713 32.3424 18.2007 32.0611 17.9274C31.7798 17.6541 31.3983 17.5006 31.0005 17.5006C30.6027 17.5006 30.2212 17.6541 29.9399 17.9274C29.6586 18.2007 29.5006 18.5713 29.5006 18.9577V29.5226C29.5006 30.6533 28.5406 31.5858 27.3747 31.5858H5.62575C4.4598 31.5858 3.49985 30.6533 3.49985 29.5226V8.39286C3.49985 7.26216 4.4598 6.32962 5.62575 6.32962H16.4992C16.897 6.32962 17.2785 6.17611 17.5598 5.90285C17.8411 5.6296 17.9991 5.25898 17.9991 4.87254C17.9991 4.48609 17.8411 4.11548 17.5598 3.84222C17.2785 3.56896 16.897 3.41545 16.4992 3.41545H5.62575Z" fill="currentColor" />
 								</svg>
@@ -1467,7 +1467,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Cкладирования грузов как на паллетах всех типов, так и в ящиках, бочках, рулонах и т.д.</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Посмотреть товары в каталоге</a>
+												<a class="details-footer-item__btn btn" href="https://steel-world.ru" target="_blank">Посмотреть товары в каталоге</a>
 											</div>
 										</div>
 									</div>
@@ -1480,7 +1480,7 @@
 										<div class="details-footer-item__right">
 											<div class="details-footer-item__text">Хранения как однотипных, так и комбинированных грузов, обеспечивая легкий доступ к каждому виду продукции</div>
 											<div class="details-footer-item__actions">
-												<a class="details-footer-item__btn btn" href="#">Связаться с нами</a>
+												<button class="details-footer-item__btn btn" type="button" data-goto="form-section">Связаться с нами</button>
 											</div>
 										</div>
 									</div>
