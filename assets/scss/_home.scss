@@ -280,6 +280,7 @@
 		gap: rem(20);
 		@media (any-hover: hover) {
 			.catalog-item:hover & {
+				cursor: pointer;
 				opacity: 1;
 				visibility: visible;
 			}
@@ -1001,6 +1002,8 @@
 	}
 	// .projects-slider__title
 	&__title {
+		text-align: center;
+		line-height: 120%;
 		font-size: rem(26);
 		@media (max-width: em($md2)) {
 			font-size: rem(23);
@@ -1201,6 +1204,9 @@
 		}
 		// .main-form__row_3
 		&_3 {
+		}
+		// .main-form__row_4
+		&_4 {
 			display: grid;
 			grid-template-columns: auto 1fr;
 			gap: rem(30) rem(55);

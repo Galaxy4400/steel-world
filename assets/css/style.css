@@ -6053,7 +6053,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   --color-focus: #26b9ff;
   --color-main-light: #3cc7ec;
   --color-main: #3cc7ec;
-  --color-main-dark: #3cc7ec;
+  --color-main-dark: #29add1;
   --color-body-background: #f1f1f3;
   --color-font: #000000;
   --color-link: #000000;
@@ -6581,8 +6581,10 @@ textarea.input {
   cursor: pointer;
   position: relative;
 }
-.check_default {
-  padding: 0px 0px 0px 1.875rem;
+.check__mark {
+  display: inline-block;
+  font-size: 1.125rem;
+  margin-left: 2.1875rem;
 }
 .check_default .check__mark {
   position: relative;
@@ -7705,6 +7707,7 @@ textarea.input {
 }
 @media (any-hover: hover) {
   .catalog-item:hover .catalog-item__content {
+    cursor: pointer;
     opacity: 1;
     visibility: visible;
   }
@@ -8460,6 +8463,8 @@ textarea.input {
   display: inline-flex;
 }
 .projects-slider__title {
+  text-align: center;
+  line-height: 120%;
   font-size: 1.625rem;
 }
 @media (max-width: 61.9375em) {
@@ -8676,13 +8681,13 @@ textarea.input {
     gap: 0.9375rem;
   }
 }
-.main-form__row_3 {
+.main-form__row_4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1.875rem 3.4375rem;
 }
 @media (max-width: 61.9375em) {
-  .main-form__row_3 {
+  .main-form__row_4 {
     grid-template-columns: 1fr;
   }
 }

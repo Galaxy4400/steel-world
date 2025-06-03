@@ -271,11 +271,14 @@ textarea.input {
 
 	// .check__mark
 	&__mark {
+		display: inline-block;
+		font-size: rem(18);
+		margin-left: rem(35);
 	}
 
 	// .check_default
 	&_default {
-		padding: 0px 0px 0px rem(30);
+		// padding: 0px 0px 0px rem(30);
 		.check__mark {
 			position: relative;
 			&::before {
